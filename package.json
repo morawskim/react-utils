@@ -11,7 +11,9 @@
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
     "start": "webpack-dev-server --hot --mode development",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "^16.13.1",
@@ -19,27 +21,32 @@
     "react-hot-loader": "^4.12.21"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@hot-loader/react-dom": "^16.13.0+4.12.20",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "jest": "^26.1.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@hot-loader/react-dom": "^16.13.0+4.12.20",
-    "webpack-dev-server": "^3.11.0",
-    "jest": "^26.1.0",
-    "babel-jest": "^26.1.0",
-    "typescript": "^3.9.7",
-    "ts-loader": "^8.0.1",
-    "css-loader": "^3.6.0",
-    "sass-loader": "^9.0.2",
-    "node-sass": "^4.14.1",
-    "style-loader": "^1.2.1",
-    "prettier": "^2.0.5"
-  }
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
 }
