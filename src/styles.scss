@@ -4,3 +4,5 @@ h1 {
   color: $primary-color;
   background-color: $bg;
 }
+
+@import "./src/scss/loaders/ring";
