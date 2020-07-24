@@ -12,6 +12,10 @@ export const colorFromBody = () => (
   <Ring />
 );
 
-export const inheritColor = () => (
-  <div style={{color: '#AA767C'}}><Ring /></div>
+export const withTypeStyle = () => (
+  <Ring type={'style'} color='#AA767C' />
+);
+
+export const withTypeClass = () => (
+  <Ring type={'class'} className='foo' />
 );

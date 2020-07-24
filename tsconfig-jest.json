@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "lib": ["webworker", "es2020.promise", "dom", "es6", "dom.iterable", "scripthost"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
