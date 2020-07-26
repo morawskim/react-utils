@@ -12,6 +12,7 @@
     "build-prod": "webpack -p --mode production",
     "start": "webpack-dev-server --hot --mode development",
     "test": "jest",
+    "coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"

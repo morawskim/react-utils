@@ -1,0 +1,42 @@
+stages:
+  - prepare
+  - qa
+  - docker
+  - deploy
+
+npm:
+  stage: prepare
+  image: node:10.16-slim
+  script:
+    - npm ci
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 30 days
+    when: on_success
+
+.test:
+  stage: qa
+  image: node:10.16-slim
+  script:
+    - npm run coverage
+  dependencies:
+    - npm
+  artifacts:
+    paths:
+      - coverage/
+    expire_in: 30 days
+    when: on_success
+
+jest:
+  extends: .test
+  except:
+    - master
+
+jest-master:
+  extends: .test
+  after_script:
+    - npm install --only=prod codecov
+    - ./node_modules/.bin/codecov --token="${CODECOV_TOKEN}"
+  only:
+    - master
