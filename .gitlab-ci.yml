@@ -45,8 +45,7 @@ storybook:
   stage: deploy
   image: node:10.16
   script:
-    - git remote show
-    - git remote show github || git remote add github git@github.com:morawskim/react-utils.git
+    - git remote | grep github || git remote add github https://github.com/morawskim/react-utils.git
     - npm run deploy-storybook -- --ci --remote=github --host-token-env-variable=GITHUB_TOKEN
   dependencies:
     - npm
