@@ -55,5 +55,10 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "storybook-deployer": {
+    "gitUsername": "GH Pages Bot",
+    "gitEmail": "marcin@morawskim.pl",
+    "commitMessage": "Deploy Storybook [skip ci]"
+  }
 }
