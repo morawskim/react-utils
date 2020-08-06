@@ -26,6 +26,6 @@ export default {
     component: Example,
 };
 
-export const onlyOneChild = () => (
+export const example = () => (
     <Example />
 );
